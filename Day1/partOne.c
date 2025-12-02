@@ -5,7 +5,7 @@
 
 #include "common.c"
 
-int rotate(int currPosition, struct RotationInstruction *instruction)
+int one_rotate(int currPosition, struct RotationInstruction *instruction)
 {
     int newPosition = currPosition + (instruction->numMoves * instruction->direction);
 
@@ -40,7 +40,7 @@ int solvePart1(int lockPosition, FILE* input_file)
             exit(1);
         }
 
-        lockPosition = rotate(lockPosition, instruction);
+        lockPosition = one_rotate(lockPosition, instruction);
 
         if(lockPosition == 0)
         {

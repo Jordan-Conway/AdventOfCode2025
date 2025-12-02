@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #include "partOne.c"
+#include "partTwo.c"
 
 int main(int argc, char* argv[])
 {
@@ -30,6 +31,10 @@ int main(int argc, char* argv[])
     if(*argv[2] == '1')
     {
         numZeroes = solvePart1(lockPosition, input_file);
+    }
+    else if(*argv[2] == '2')
+    {
+        numZeroes = solvePart2(lockPosition, input_file);
     }
 
     fclose(input_file);
